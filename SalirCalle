@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class SalirCalle {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        // Pedimos los valores booleanos al usuario
+        System.out.print("¿Está lloviendo? (true/false): ");
+        boolean estaLloviendo = sc.nextBoolean();
+        
+        System.out.print("¿Ha terminado la tarea online de programación? (true/false): ");
+        boolean haTerminadoTarea = sc.nextBoolean();
+        
+        System.out.print("¿Necesita ir al supermercado? (true/false): ");
+        boolean necesitaIrSupermercado = sc.nextBoolean();
+        
+        // Comprobamos si podemos salir a la calle
+        boolean salirCalle = (!estaLloviendo && haTerminadoTarea) || necesitaIrSupermercado;
+        
+        // Mostramos el resultado
+        System.out.println("¿Podemos salir a la calle? " + (salirCalle ? "SÍ" : "NO"));
+    }
+}
